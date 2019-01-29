@@ -1,0 +1,25 @@
+<h3 class="blue white-texte center">
+Ajoute Stagaire
+</h3>
+<div>
+  <form [formGroup]="form" (ngSubmit) = "addVoiture()">
+  <div> 
+    <div class="input-field">
+      <input placeholder="marque" id="marque" type= "text" formControlName="marque">
+      <label for="marque">MARQUE</label>
+    </div>    
+    <div class="input-field">
+      <input placeholder="modele" id="modele" type= "text" formControlName="modele">
+      <label for="modele">MODELE</label>
+    </div>   
+    <div class="input-field">
+      <input placeholder="pays" id="pays" type= "text" formControlName="pays">
+      <label for="pays">PAYS</label>
+    </div> 
+    <button class="btn waves-effect waves-light" type="submit" name="action">ENREGISTRER
+      <i class="material-icons right">send</i>
+    </button>
+  </div> 
+  </form>
+</div>
+

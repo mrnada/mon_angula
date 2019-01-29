@@ -1,0 +1,24 @@
+<h3 class="blue white-text center">
+  Affichage des voitures
+</h3>
+<table class="highlight striped">
+  <thead class="black white-text">
+    <tr>
+      <th>ID</th><th>Marque</th><th>Modele</th><th>Pays</th><th>Action</th>
+    </tr>
+  </thead>   
+  <tbody>
+    <tr *ngFor="let voiture of voitures | async">
+        <td>{{ voiture.id }}</td>
+        <td>{{ voiture.marque }}</td>
+        <td>{{ voiture.modele }}</td>
+        <td>{{ voiture.pays }}</td>
+        <td>
+          <a (click)="removeVoiture(voiture.id)" class="waves-effect waves-light btn btn red">Supprimer
+          <i class="material-icons">delete</i>
+          </a>
+
+        </td>
+    </tr>           
+  </tbody>
+</table>
